@@ -3,3 +3,5 @@ sudo apt install ansible
 vi inventory
 ansible all --key-file ~/.ssh/ansible -i inventory -m ping
 vi ansible.cfg
+ansible all -m gather_facts
+ansible all -m gather_facts --limit 10.0.0.56
